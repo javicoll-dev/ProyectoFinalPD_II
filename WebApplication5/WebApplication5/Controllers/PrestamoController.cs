@@ -44,9 +44,7 @@ namespace WebApplication5.Controllers
             return View();
         }
 
-        // POST: Prestamo/Create
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Prestamo/Create        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Capital,Interes,Periodo,ClientesId")] Prestamo prestamo)
@@ -78,9 +76,7 @@ namespace WebApplication5.Controllers
             return View(prestamo);
         }
 
-        // POST: Prestamo/Edit/5
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Prestamo/Edit/5        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,Capital,Interes,Periodo,ClientesId")] Prestamo prestamo)

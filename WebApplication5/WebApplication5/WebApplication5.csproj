@@ -9330,6 +9330,7 @@
     <Content Include="Views\Prestamo\Edit.cshtml" />
     <Content Include="Views\Prestamo\Index.cshtml" />
     <Content Include="Views\Layouts\WebApp.cshtml" />
+    <Content Include="Views\Clientes\Indexnew.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
