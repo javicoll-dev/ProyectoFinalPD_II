@@ -4,15 +4,16 @@
     ViewBag.Title = "Eliminar prestamo";
 }
 
-<h2>Eliminar prestamo</h2>
+<h2>Esta seguro que desea eliminar el registro del prestamo?</h2>
 
-<h3>Esta seguro que desea eliminar el registro?</h3>
+
 <div>
     @*<h4>Prestamo</h4>*@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Clientes.Nombre)
+            @Html.LabelFor(model => model.Clientes.Nombre, "Nombrecito", htmlAttributes: new { @class = "control-label col-md-0" })
+            @*@Html.DisplayNameFor(model => model.Clientes.Nombre)*@
         </dt>
 
         <dd>
@@ -20,7 +21,17 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Capital)
+            @Html.LabelFor(model => model.Clientes.Apellidos, "Apellidos", htmlAttributes: new { @class = "control-label col-md-0" })
+            @*@Html.DisplayNameFor(model => model.Clientes.Nombre)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Clientes.Apellidos)
+        </dd>
+
+        <dt>
+            @Html.LabelFor(model => model.Capital, "Monto", htmlAttributes: new { @class = "control-label col-md-0" })
+            @*@Html.DisplayNameFor(model => model.Capital)*@
         </dt>
 
         <dd>
@@ -28,7 +39,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Interes)
+            @Html.LabelFor(model => model.Interes, "Interes (%)", htmlAttributes: new { @class = "control-label col-md-0" })
+            @*@Html.DisplayNameFor(model => model.Interes)*@
         </dt>
 
         <dd>

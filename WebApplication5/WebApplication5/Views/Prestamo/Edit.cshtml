@@ -4,7 +4,7 @@
     ViewBag.Title = "Editar";
 }
 
-<h2>Editar dat</h2>
+<h2>Datos del prestamo a editar</h2>
 
 
 @using (Html.BeginForm())
@@ -12,14 +12,14 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Detalles del prestamo</h4>
+        
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.Id)
 
         
         <div class="form-group">
-            @Html.LabelFor(model => model.Capital, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Capital, "Monto", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Capital, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Capital, "", new { @class = "text-danger" })
@@ -27,7 +27,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Interes, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Interes, "Interes (%)", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Interes, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Interes, "", new { @class = "text-danger" })
@@ -46,9 +46,12 @@
             @Html.LabelFor(model => model.ClientesId, "Cliente", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
 
-                @Html.DisplayFor(model => model.Clientes.Nombre)
-                @*@Html.DropDownList("ClientesId", null, htmlAttributes: new { @class = "form-control" })*@
-                @*@Html.ValidationMessageFor(model => model.ClientesId, "", new { @class = "text-danger" })*@
+
+
+                @*@Html.DisplayFor(model => model.Clientes.Nombre)*@
+                
+                @Html.DropDownList("ClientesId", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ClientesId, "", new { @class = "text-danger" })
             </div>
         </div>
 

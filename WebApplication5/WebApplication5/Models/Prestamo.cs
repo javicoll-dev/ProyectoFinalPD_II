@@ -12,6 +12,6 @@ namespace Prestamos.Models
         public decimal Interes { get; set; }
         public decimal Periodo { get; set; }
         public int ClientesId { get; set; }        
-        public virtual Clientes Clientes { get; set; }
+        public virtual Clientes Clientes { get; set; }  
     }
 }

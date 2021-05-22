@@ -27,7 +27,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Capital)
+            @Html.LabelFor(model => model.Capital, "Monto", htmlAttributes: new { @class = "control-label col-md-0" })
+            @*@Html.DisplayNameFor(model => model.Capital)*@
         </dt>
 
         <dd>
@@ -35,7 +36,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Interes)
+            @Html.LabelFor(model => model.Interes, "Interes (%)", htmlAttributes: new { @class = "control-label col-md-0" })
+            @*@Html.DisplayNameFor(model => model.Interes)*@
         </dt>
 
         <dd>
@@ -53,7 +55,7 @@
     </dl>
 </div>
 
-<h1>Tabla de amortizacion.</h1>
+<h1>Tabla de amortización</h1>
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -104,6 +106,7 @@
 </table>
 
 <p>
-    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Volver a la Lista", "Index")
+    @Html.ActionLink("Volver a la Lista", "Index") |
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id })
+
 </p>

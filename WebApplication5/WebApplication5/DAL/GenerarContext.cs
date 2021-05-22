@@ -13,6 +13,7 @@ namespace Prestamos.DAL
 
         public DbSet<Clientes> Clientes { get; set; }
         public DbSet<Prestamo> Prestamos { get; set; }
+              
 
     }
 }
